@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deal Navigator Editors</title>
+<style>
+  body {font-family: Arial, sans-serif; background: #111; color: #eee; padding: 20px;}
+  .btn {padding: 12px 25px; background: #1f8fff; color: white; border-radius: 6px; border: none; cursor: pointer; font-size: 16px;}
+  #editors {display: none; margin-top: 40px;}
+  .cards {display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;}
+  .card {background: #1a1a1a; padding: 14px; border-radius: 10px; text-align: center; width: 140px;}
+  .card img {width: 100px; height: 100px; border-radius: 50%; object-fit: cover;}
+</style>
+</head>
+<body>
+
+<h1>Deal Navigator Editors</h1>
+<p>Click the button to reveal our skilled editors:</p>
+<button class="btn" id="showBtn">Show Editors</button>
+
+<div id="editors">
+  <h2>Our Editors</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://via.placeholder.com/100" alt="Editor 1">
+      <p>Editor 1</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/100" alt="Editor 2">
+      <p>Editor 2</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/100" alt="Editor 3">
+      <p>Editor 3</p>
+    </div>
+  </div>
+</div>
+
+<script>
+document.getElementById('showBtn').addEventListener('click', function() {
+  const editors = document.getElementById('editors');
+  editors.style.display = 'block';
+  editors.scrollIntoView({behavior: 'smooth'});
+});
+</script>
+
+</body>
+</html>
